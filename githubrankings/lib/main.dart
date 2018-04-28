@@ -1,27 +1,23 @@
 import 'package:flutter/material.dart';
-import 'GitHubRanking.dart';
+import 'Locations.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
 
-
   @override
   Widget build(BuildContext context) {
-    var ranking = new GitHubRanking();
-
-
     return new MaterialApp(
-      title: 'Fetch Data Example',
-      theme: new ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Fetch sdfasdf Example'),
+        title: 'GitHubRankings',
+        theme: new ThemeData(
+            primarySwatch: Colors.red,
         ),
-        body: ranking.getGitHubRanking()
-      ),
+        home: new Scaffold(
+            appBar: new AppBar(
+                title: new Text('GitHubRankings'),
+            ),
+            body: getLocations()
+        ),
     );
   }
 }
